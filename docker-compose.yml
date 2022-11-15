@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  laravel:
+    restart: always
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - APP_ENV=development
+    image: brianatisw/nginx-test
+    ports:
+      - 8888:80
+    environment:
+      - APP_ENV=development
