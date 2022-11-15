@@ -7,8 +7,6 @@ RUN apt update \
 
 COPY index.html usr/share/nginx/html
 
-# COPY /start.sh /
+COPY /start.sh /
 
-# EXPOSE 80
-
-# CMD ["/start.sh"]
+CMD ["/start.sh"]
